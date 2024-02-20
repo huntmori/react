@@ -1,5 +1,6 @@
 import reactImage from './assets/react-core-concepts.png';
-import componentsImage from './assets/components.png';
+import { CORE_CONCEPTS } from './data';
+
 const reactDescriptions = [ 'Fundamental', 'Crucial', 'Core' ];
 
 function getRandomInt(max) {
@@ -31,6 +32,15 @@ function CoreConecept(props) {
     </li>
   );
 }
+function CoreConecept2({image, title, description}) {
+  return (
+    <li>
+      <img src={image} alt={title}/>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  );
+}
 
 function App() {
   return (
@@ -41,15 +51,21 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
             <CoreConecept 
-              title="Components" 
-              description="The core UI building block."
-              image={componentsImage}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
               />
+            <CoreConecept {...CORE_CONCEPTS[1]} />
             <CoreConecept
-              title="Props"
+              title={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+              image={CORE_CONCEPTS[2].image}
             />
-            <CoreConecept/>
-            <CoreConecept/>
+            <CoreConecept2
+              title={CORE_CONCEPTS[3].title}
+              description={CORE_CONCEPTS[3].description}
+              image={CORE_CONCEPTS[3].image}
+            />
           </ul>
         </section>
       </main>
