@@ -1,9 +1,9 @@
 import reactImage from './assets/react-core-concepts.png';
 import { CORE_CONCEPTS } from './data';
 
-import Header from './components/Header';
-import CoreConcept from './components/CoreConcept';
-import CoreConcept2 from './components/CoreConcept2';
+import Header from './components/Header/Header.jsx';
+import CoreConcept from './components/CoreConcept/CoreConcept.jsx';
+import CoreConcept2 from './components/CoreConcept/CoreConcept2.jsx';
 
 function App() {
   return (
