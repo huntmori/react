@@ -1,8 +1,6 @@
 //export default function TabButton(props) {
 export default function TabButton({ children, onSelect }) {
-    function handleClick() {
-        console.log('hello world');
-    };
+    console.log('TabButton COMPONENT EXECUTING');
 
     return (
         <li>
