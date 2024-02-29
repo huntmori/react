@@ -33,26 +33,29 @@ export default function Examples() {
 
     return (
         <Section id="examples" title="Examples" className="">
-          <Tabs buttons={
-            <>
-              {[ 
-                { value:'components', label:'Components'}, 
-                { value:'jsx', label: 'JSX'},
-                { value: 'props', label: 'Props'},
-                { value:'state', label: 'State'} 
-              ].map(
-                (item) => {
-                  return <>
-                    <TabButton 
-                      isSelected={selectedTopic === item.value }
-                      onClick={() => handleSelect(item.value)}
-                    >
-                      {item.label}
-                    </TabButton>
-                  </>
-                }
-              )}
-            </>
+          <Tabs 
+            /*buttonsContainer={Section}*/
+            buttonsContainer="menu"
+            buttons={
+              <>
+                {[ 
+                  { value:'components', label:'Components'}, 
+                  { value:'jsx', label: 'JSX'},
+                  { value: 'props', label: 'Props'},
+                  { value:'state', label: 'State'} 
+                ].map(
+                  (item) => {
+                    return <>
+                      <TabButton 
+                        isSelected={selectedTopic === item.value }
+                        onClick={() => handleSelect(item.value)}
+                      >
+                        {item.label}
+                      </TabButton>
+                    </>
+                  }
+                )}
+              </>
           }>
             {tabContent}
           </Tabs>
