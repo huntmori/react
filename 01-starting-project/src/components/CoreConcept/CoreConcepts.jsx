@@ -13,7 +13,7 @@ export default function CoreConcepts() {
                   description={conceptItem.description}
                   image={conceptItem.image}
                 />
-              })}
+            })}
           </ul>
         </section>
     );
