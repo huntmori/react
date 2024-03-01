@@ -35,14 +35,14 @@ export default function Examples() {
         <Section id="examples" title="Examples" className="">
           <Tabs 
             /*buttonsContainer={Section}*/
-            buttonsContainer="menu"
+            /*ButtonsContainer="menu"*/
             buttons={
               <>
                 {[ 
-                  { value:'components', label:'Components'}, 
-                  { value:'jsx', label: 'JSX'},
-                  { value: 'props', label: 'Props'},
-                  { value:'state', label: 'State'} 
+                  { value:'components', label:'Components'  }, 
+                  { value:'jsx',        label: 'JSX'        },
+                  { value: 'props',     label: 'Props'      },
+                  { value:'state',      label: 'State'      } 
                 ].map(
                   (item) => {
                     return <>
