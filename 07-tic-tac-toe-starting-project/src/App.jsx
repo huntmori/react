@@ -34,6 +34,10 @@ function resetGameBoard() {
 
 function App() {
   const [ gameTurns, setGameTurns ] = useState([]);
+  const [ players, setPlayers ] = useState({
+    X : 'Player 1',
+    O: 'Player 2'
+  });
 
   const activePlayer = deriveActivePlayer(gameTurns);
 
@@ -86,6 +90,15 @@ function App() {
   const handleRestart = function () {
     setGameTurns([]);
     gameBoard = resetGameBoard();
+  }
+
+  const handlePlayerNameChange = function ( symbol, newName) {
+    setPlayers(function(prevPlayers) {
+      return {
+        ...prevPlayers,
+        [symbol]: newName
+      }
+    });
   }
 
   return (
