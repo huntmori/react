@@ -36,7 +36,7 @@ function App() {
   const [ gameTurns, setGameTurns ] = useState([]);
   const [ players, setPlayers ] = useState({
     X : 'Player 1',
-    O: 'Player 2'
+    O: 'Player 2',
   });
 
   const activePlayer = deriveActivePlayer(gameTurns);
