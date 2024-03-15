@@ -16,11 +16,11 @@ function App() {
         setUserInput(prevUserInput => {
             return {
                 ...prevUserInput,
-                [inputIdentifier]: newValue
+                [inputIdentifier]: Number(newValue)
             }
         });
     }
-
+    console.log(userInput)
   return (
     <>
       <Header />
@@ -28,7 +28,7 @@ function App() {
           userInput={userInput}
           onChange={handleChange}
       />
-    <Results userInput={userInput} />
+    <Results input={userInput} />
     </>
   )
 }

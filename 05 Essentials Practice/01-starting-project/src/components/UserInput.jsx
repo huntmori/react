@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function UserInput({ userInput, onChange }){
+export default function UserInput({ userInput, onChange }) {
 
     return (
         <section id="user-input">
@@ -13,7 +13,7 @@ export default function UserInput({ userInput, onChange }){
                         value={userInput.initialInvestment}
                         onChange={
                             function(event) {
-                                return onChange('initialInvestment', event.target.value)
+                                return onChange('initialInvestment', (event.target.value))
                             }
                         }
                     />
@@ -26,7 +26,7 @@ export default function UserInput({ userInput, onChange }){
                         value={userInput.annualInvestment}
                         onChange={
                             function(event) {
-                                return onChange('annualInvestment', event.target.value)
+                                return onChange('annualInvestment', (event.target.value))
                             }
                         }
                     />
@@ -41,7 +41,7 @@ export default function UserInput({ userInput, onChange }){
                         value={userInput.expectedReturn}
                         onChange={
                             function(event) {
-                                return onChange('expectedReturn', event.target.value)
+                                return onChange('expectedReturn', (event.target.value))
                             }
                         }
                     />
@@ -54,7 +54,7 @@ export default function UserInput({ userInput, onChange }){
                         value={userInput.duration}
                         onChange={
                             function(event) {
-                                return onChangesssssssssssssssssss('duration', event.target.value)
+                                return onChange('duration', (event.target.value))
                             }
                         }
                     />
