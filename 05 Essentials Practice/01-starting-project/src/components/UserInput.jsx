@@ -1,22 +1,6 @@
 import { useState } from "react";
 
-export default function UserInput() {
-
-    const [ userInput, setUserInput ] = useState({
-        initialInvestment: 10000,
-        annualInvestment: 1200,
-        expectedReturn: 6,
-        duration: 10,
-    });
-
-    const handleChange = function(inputIdentifier, newValue) {
-        setUserInput(prevUserInput => {
-           return {
-               ...prevUserInput,
-               [inputIdentifier]: newValue
-           }
-        });
-    }
+export default function UserInput({ userInput, onChange }){
 
     return (
         <section id="user-input">
@@ -29,7 +13,7 @@ export default function UserInput() {
                         value={userInput.initialInvestment}
                         onChange={
                             function(event) {
-                                return handleChange('initialInvestment', event.target.value)
+                                return onChange('initialInvestment', event.target.value)
                             }
                         }
                     />
@@ -42,7 +26,7 @@ export default function UserInput() {
                         value={userInput.annualInvestment}
                         onChange={
                             function(event) {
-                                return handleChange('annualInvestment', event.target.value)
+                                return onChange('annualInvestment', event.target.value)
                             }
                         }
                     />
@@ -57,7 +41,7 @@ export default function UserInput() {
                         value={userInput.expectedReturn}
                         onChange={
                             function(event) {
-                                return handleChange('expectedReturn', event.target.value)
+                                return onChange('expectedReturn', event.target.value)
                             }
                         }
                     />
@@ -70,7 +54,7 @@ export default function UserInput() {
                         value={userInput.duration}
                         onChange={
                             function(event) {
-                                return handleChange('duration', event.target.value)
+                                return onChangesssssssssssssssssss('duration', event.target.value)
                             }
                         }
                     />
