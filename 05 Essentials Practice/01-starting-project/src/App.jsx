@@ -21,16 +21,16 @@ function App() {
         });
     }
     console.log(userInput)
-  return (
-    <>
-      <Header />
-      <UserInput
-          userInput={userInput}
-          onChange={handleChange}
-      />
-    <Results input={userInput} />
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <UserInput
+                userInput={userInput}
+                onChange={handleChange}
+            />
+            <Results input={userInput} />
+        </>
+    );
 }
 
 export default App
