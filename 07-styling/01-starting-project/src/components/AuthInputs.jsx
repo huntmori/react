@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
 
+import Button from "./Label.jsx";
+import CustomInput from "./Input.jsx";
+
 const ControlContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,20 +32,6 @@ const Input = styled.input`
   border-color: ${ ({ $invalid }) => ( $invalid ? '#f73f3f' : 'none' ) };
   background-color: ${ ({ $invalid }) => ( $invalid ? '#fed2d2' : '#d1d5db' )};
 `
-const Button = styled.button`
-  padding: 1rem 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 0.25rem;
-  color: #1f2937;
-  background-color: #f0b322;
-  border-radius: 6px;
-  border: none;
-
-  &:hover {
-    background-color: #f0920e;
-  }
-`;
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -66,29 +55,21 @@ export default function AuthInputs() {
 
   return (
     <div id="auth-inputs">
-      <ControlContainer >
-        <p className={`paragraph`}>
-          <Label $invalid={emailNotValid}>
-            Email
-          </Label>
-          <Input
-            type="email"
-            $invalid={emailNotValid}
-            onChange={(event) => handleInputChange('email', event.target.value)}
-          />
-        </p>
-        <p>
-          <Label $invalid={passwordNotValid}>
-            Password
-          </Label>
-          <Input
+      <ControlContainer>
+        <CustomInput
+          label="Email"
+          invalid={emailNotValid}
+          type="Email"
+          onChange={(event) => handleInputChange('email', event.target.value)}
+        />
+        <CustomInput
+            label="Password"
+            invalid={passwordNotValid}
             type="password"
-            $invalid={passwordNotValid}
-            onChange={(event) =>
+            onChange={function(event) {
               handleInputChange('password', event.target.value)
-            }
-          />
-        </p>
+            }}
+        />
       </ControlContainer>
       <div className="actions">
         <button type="button" className="text-button">
