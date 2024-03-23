@@ -63,12 +63,12 @@ export default function AuthInputs() {
           onChange={(event) => handleInputChange('email', event.target.value)}
         />
         <CustomInput
-            label="Password"
-            invalid={passwordNotValid}
-            type="password"
-            onChange={function(event) {
-              handleInputChange('password', event.target.value)
-            }}
+          label="Password"
+          invalid={passwordNotValid}
+          type="password"
+          onChange={function(event) {
+            handleInputChange('password', event.target.value)
+          }}
         />
       </ControlContainer>
       <div className="actions">
